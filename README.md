@@ -1,58 +1,138 @@
-Descripción del proyecto
+Descripción General
 
-Este proyecto es una aplicación web simple orientada a instituciones educativas. Permite gestionar alumnos, registrar asistencia, cargar calificaciones y visualizar estadísticas generales.
+📘 Gestión Escolar es una aplicación web diseñada para facilitar la administración de un centro educativo.
+Permite manejar alumnos, registrar asistencia, ingresar calificaciones y visualizar estadísticas de manera intuitiva y ordenada.
 
-El objetivo es ofrecer una herramienta organizada, intuitiva y de rápida implementación, ideal para prácticas académicas o como demostración de habilidades de desarrollo web.
+El proyecto fue desarrollado con un enfoque académico, priorizando:
 
-Características principales
-1. Gestión de alumnos
+Separación clara de lenguajes (HTML, CSS, JS).
 
-Alta de nuevos estudiantes.
+Organización en módulos simples.
 
-Visualización de listado dinámico.
+Manipulación dinámica del DOM.
 
-Detección de datos incompletos.
+Buenas prácticas de diseño responsive.
 
-Mensajes de validación.
+Características Principales
+📚 Gestión de Alumnos
 
-2. Registro de asistencia
+Alta de estudiantes mediante formularios validados.
 
-Listado automático de alumnos.
+Listado dinámico en tiempo real.
 
-Marcación por checkbox.
+Visualización clara de datos ingresados.
 
-Confirmación visual de asistencia cargada.
+Sistema de alertas (éxito y error).
 
-3. Carga de calificaciones
+📝 Registro de Asistencia
 
-Selección de estudiante.
+Lista automática de alumnos cargados.
 
-Ingreso de notas numéricas.
+Marcación mediante checkboxes.
 
-Validación de datos.
+Mensajes de confirmación del registro.
 
-Confirmación visual del guardado de notas.
+Validación básica de datos faltantes.
 
-4. Estadísticas
+📊 Carga de Calificaciones
 
-Registro de cantidad total de alumnos.
+Selección rápida del estudiante.
 
-Estadísticas dinámicas según se agregan estudiantes.
+Validación de entrada numérica.
 
-Vista rápida y visualmente ordenada.
+Guardado dinámico en el DOM.
 
-5. Interfaz organizada por pestañas (Tabs)
+Alertas visuales de carga exitosa.
 
-Navegación entre Alumnos, Asistencia, Notas y Estadísticas.
+📈 Estadísticas en Tiempo Real
 
-Diseño simple, responsive y limpio.
+Cantidad total de alumnos.
 
-Tecnologías utilizadas
+Estadísticas dinámicas según cambios.
 
-HTML5
+Diseño visual limpio y organizado.
 
-CSS3
+🧭 Navegación por Pestañas (Tabs)
 
-JavaScript (vanilla)
+Alternación entre módulos sin recargar página.
 
-Estructura organizada por carpetas (css/, js/)
+Sistema simple y mantenible.
+
+📱 Diseño Responsive
+
+Adaptado para computadoras, tablets y móviles.
+
+Layout flexible mediante CSS Grid y Flex.
+
+Tecnologías Utilizadas
+Icon	Tecnología
+💻	HTML5 – Estructura del proyecto
+🎨	CSS3 – Estilos, responsive design y layout
+⚙️	JavaScript Vanilla – Lógica, DOM, validaciones
+📁	Organización modular mediante carpetas
+Estructura del Proyecto
+/project
+│── index.html               # Archivo principal
+│── /css
+│     └── styles.css         # Estilos globales
+│── /js
+      └── app.js             # Lógica y eventos
+
+Instalación y Ejecución
+1. Clonar el repositorio
+git clone https://github.com/tu-usuario/nombre-del-repo.git
+
+2. Acceder a la carpeta del proyecto
+cd nombre-del-repo
+
+3. Ejecutar
+
+Abrir el archivo:
+
+index.html
+
+
+No se requiere instalación, servidor ni dependencias.
+
+Objetivo Académico
+
+Este proyecto fue desarrollado como práctica de:
+
+Separación de capas (HTML, CSS, JS)
+
+Manipulación del DOM
+
+Validaciones interactivas
+
+Diseño responsive
+
+Organización de un sistema escolar con módulos independientes
+
+Es ideal para demostrar conocimientos de desarrollo web inicial e intermedio.
+
+Capturas del Proyecto
+
+(Coloca imágenes aquí una vez que subas el repositorio)
+
+Ejemplo:
+
+/assets
+   │── screenshot1.png
+   │── screenshot2.png
+   │── screenshot3.png
+
+
+Luego agregas:
+
+![Vista general](assets/screenshot1.png)
+![Gestión de alumnos](assets/screenshot2.png)
+![Estadísticas](assets/screenshot3.png)
+
+Autor
+
+Desarrollado por [Tu Nombre]
+Estudiante de programación y desarrollador web en progreso.
+
+Licencia
+
+Este proyecto está bajo la licencia MIT, de uso libre para fines educativos.
