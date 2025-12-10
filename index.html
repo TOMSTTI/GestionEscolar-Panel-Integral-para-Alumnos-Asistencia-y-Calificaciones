@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Gestión de Alumnos - Escuela Primaria</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>🎓 Sistema de Gestión Escolar</h1>
+            <p>Escuela Primaria - Gestión de Alumnos</p>
+        </header>
+
+        <div class="tabs">
+            <button class="tab-btn active" onclick="switchTab(0)">📋 Lista de Alumnos</button>
+            <button class="tab-btn" onclick="switchTab(1)">➕ Agregar Alumno</button>
+            <button class="tab-btn" onclick="switchTab(2)">✅ Asistencia</button>
+            <button class="tab-btn" onclick="switchTab(3)">📝 Calificaciones</button>
+        </div>
+
+        <!-- Tab 0: Lista de Alumnos -->
+        <div class="tab-content active" id="tab-0">
+            <h2>Lista de Alumnos</h2>
+            <div class="stats-grid" id="statsGrid"></div>
+            <div class="student-list" id="studentList"></div>
+        </div>
+
+        <!-- Tab 1: Agregar Alumno -->
+        <div class="tab-content" id="tab-1">
+            <h2>Agregar Nuevo Alumno</h2>
+            <div id="addMessage"></div>
+            <form id="addStudentForm">
+                <div class="form-group">
+                    <label>Nombre Completo *</label>
+                    <input type="text" id="studentName" required placeholder="Ej: Juan Pérez">
+                </div>
+                <div class="form-group">
+                    <label>Edad *</label>
+                    <input type="number" id="studentAge" min="5" max="13" required placeholder="Ej: 8">
+                </div>
+                <div class="form-group">
+                    <label>Grado *</label>
+                    <select id="studentGrade" required>
+                        <option value="">Seleccionar grado</option>
+                        <option value="1">1° Grado</option>
+                        <option value="2">2° Grado</option>
+                        <option value="3">3° Grado</option>
+                        <option value="4">4° Grado</option>
+                        <option value="5">5° Grado</option>
+                        <option value="6">6° Grado</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn">Agregar Alumno</button>
+            </form>
+        </div>
+
+        <!-- Tab 2: Asistencia -->
+        <div class="tab-content" id="tab-2">
+            <h2>Control de Asistencia</h2>
+            <div id="attendanceMessage"></div>
+            <p style="margin-bottom: 20px; color: #666;">Fecha: <strong id="currentDate"></strong></p>
+            <div class="attendance-grid" id="attendanceList"></div>
+            <button class="btn" onclick="saveAttendance()" style="margin-top: 20px;">Guardar Asistencia</button>
+        </div>
+
+        <!-- Tab 3: Calificaciones -->
+        <div class="tab-content" id="tab-3">
+            <h2>Gestión de Calificaciones</h2>
+            <div id="gradeMessage"></div>
+            <div class="form-group">
+                <label>Seleccionar Alumno *</label>
+                <select id="gradeStudent" onchange="loadStudentGrades()">
+                    <option value="">Seleccionar alumno</option>
+                </select>
+            </div>
+            <div id="gradeForm" style="display: none;">
+                <h3 style="margin: 20px 0;">Calificaciones (1-10)</h3>
+                <div class="grade-input-group">
+                    <div class="form-group">
+                        <label>Matemáticas</label>
+                        <input type="number" id="gradeMath" min="1" max="10" step="0.1">
+                    </div>
+                    <div class="form-group">
+                        <label>Lengua</label>
+                        <input type="number" id="gradeLang" min="1" max="10" step="0.1">
+                    </div>
+                    <div class="form-group">
+                        <label>Ciencias</label>
+                        <input type="number" id="gradeScience" min="1" max="10" step="0.1">
+                    </div>
+                    <div class="form-group">
+                        <label>Sociales</label>
+                        <input type="number" id="gradeSocial" min="1" max="10" step="0.1">
+                    </div>
+                </div>
+                <button class="btn" onclick="saveGrades()">Guardar Calificaciones</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
